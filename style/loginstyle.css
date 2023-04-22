@@ -1,0 +1,339 @@
+/*
+ CSS Document 
+
+.wave{
+	clip-path: polygon(100% 0%, 0% 0% , 0% 65%, 1% 64.95%, 2% 64.8%, 3% 64.6%, 4% 64.3%, 5% 63.9%, 6% 63.45%, 7% 62.9%, 8% 62.25%, 9% 61.55%, 10% 60.8%, 11% 59.95%, 12% 59.05%, 13% 58.1%, 14% 57.1%, 15% 56.05%, 16% 55%, 17% 53.9%, 18% 52.8%, 19% 51.65%, 20% 50.5%, 21% 49.35%, 22% 48.2%, 23% 47.05%, 24% 45.9%, 25% 44.8%, 26% 43.75%, 27% 42.75%, 28% 41.75%, 29% 40.8%, 30% 39.9%, 31% 39.1%, 32% 38.35%, 33% 37.65%, 34% 37.05%, 35% 36.5%, 36% 36.05%, 37% 35.65%, 38% 35.35%, 39% 35.15%, 40% 35.05%, 41% 35%, 42% 35.05%, 43% 35.2%, 44% 35.45%, 45% 35.75%, 46% 36.15%, 47% 36.65%, 48% 37.2%, 49% 37.85%, 50% 38.55%, 51% 39.35%, 52% 40.2%, 53% 41.1%, 54% 42.05%, 55% 43.05%, 56% 44.1%, 57% 45.15%, 58% 46.3%, 59% 47.4%, 60% 48.55%, 61% 49.7%, 62% 50.85%, 63% 52%, 64% 53.15%, 65% 54.25%, 66% 55.35%, 67% 56.4%, 68% 57.45%, 69% 58.4%, 70% 59.35%, 71% 60.2%, 72% 61.05%, 73% 61.8%, 74% 62.45%, 75% 63.05%, 76% 63.6%, 77% 64.05%, 78% 64.4%, 79% 64.7%, 80% 64.85%, 81% 65%, 82% 65%, 83% 64.9%, 84% 64.75%, 85% 64.5%, 86% 64.2%, 87% 63.75%, 88% 63.25%, 89% 62.7%, 90% 62.05%, 91% 61.3%, 92% 60.5%, 93% 59.65%, 94% 58.75%, 95% 57.8%, 96% 56.8%, 97% 55.75%, 98% 54.65%, 99% 53.55%, 100% 52.4%);
+	background: linear-gradient(to bottom,rgb(4, 113, 255),rgb(109, 8, 177)) !important;
+	height: 100vh;
+	width: 100%;
+}*/
+body{
+    font-family: 'Lato' !important;
+/*    padding: 3rem;*/
+/*    background: linear-gradient(to bottom,rgb(4, 113, 255),rgb(109, 8, 177)) !important;*/
+	box-sizing: border-box !important;
+    
+}
+.side-img{
+    position:absolute!important;
+    left:0!important;
+     width: 100vw !important;
+    height: 100vh;
+    
+    display: inline-block!important;
+    background-image:  url("https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") !important;
+    background-color: rgba(0,0,0,0.1);
+    background-size: cover;
+    background-origin: content-box;
+    clip-path: polygon(0 0,100vw 0,100% 100%,0 100%);
+}
+.side-form{
+    padding-top: 1rem;
+    width:50vw !important;
+    height: 100vh;
+    position: absolute !important;
+    right: 0 !important;
+/*    font-size: 1.2rem;*/
+    display: inline-block!important;
+/*    background:  rgba(214,214,214,1.00) !important;*/
+/*   line-height: 1.5rem;*/
+    color: #fff;
+    margin: auto;
+/*    padding: 20vh 20vh; */
+    background: linear-gradient(to right,rgba(4, 113, 255,0.8),rgba(109, 8, 177,.8)) !important;
+/*    background: rgba(255,33,37,0.80);*/
+/*    clip-path: polygon(25vw 0,0 100%,100% 100%,100% 0);*/
+/*    background:*/
+    
+}
+.side-form> .set-form{
+    width: 60%;
+    margin: auto;
+/*    margin-top:20vh;*/
+    background: rgba(255,255,255,0.3);
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+/*
+.side-form>.set-form>h2::before{
+    content: "";
+    position: relative;
+    bottom: -1rem;
+    left: 0;
+    width: 3rem;
+    height: 0.3rem;
+    color: #fff;
+}
+*/
+.side-form >.set-form>div>label{
+    display: inline;
+}
+.side-form >.set-form>div{
+/*    margin:.8rem 0;*/
+    position: relative;
+
+  padding: 0.5rem 0 0;
+
+  margin-top: 0.825rem;
+
+  width: 95%;
+}
+.side-form >.set-form>div>input,.side-form >.set-form>div>textarea{
+/*
+   margin-left: 2rem;
+    border-radius: 3px;
+    border:solid 1px #dfdfdf;
+    width: 12rem;
+*/
+    font-family: inherit;
+
+  width: 100%;
+
+  border: 0;
+
+  border-bottom: 2px solid #dfdfdf;
+
+  outline: 0;
+
+  font-size: 1rem;
+
+  color: #fff;
+
+  padding: 7px 0;
+
+  background: transparent;
+
+  transition: border-color 0.2s;
+
+
+}
+.side-form >.set-form>div>input::placeholder,.side-form >.set-form>div>textarea::placeholder{ color: transparent;}
+.side-form >.set-form>div>input:focus,.side-form >.set-form>div>textarea:focus{
+      border-bottom: 1px solid rgba(163,75,255,1.00);
+    outline: none;
+}
+.side-form >.set-form>div>input::placeholder ~ .side-form >.set-form>div>label,.side-form >.set-form>div>textarea::placeholder ~ .side-form >.set-form>div>label{  font-size: 1.3rem;
+
+    cursor: text  !important;
+    
+    top: 20px !important;
+}
+.side-form >.set-form>div>label{position: absolute;
+
+  top: 0;
+
+  display: block;
+
+  transition: 0.2s;
+
+  font-size: 1rem;
+
+  color: #dfdfdf;}
+.side-form >.set-form>div>input:focus,.side-form >.set-form>div>textarea:focus{ padding-bottom: 6px;  
+
+  font-weight: 700;
+
+  border-width: 3px;
+
+  border-image: linear-gradient(to right,rgba(4, 113, 255,1),rgba(109, 8, 177,1));
+
+  border-image-slice: 1;}
+ .side-form >.set-form>div>input:focus~.side-form >.set-form>div>label,.side-form >.set-form>div>textarea:focus ~ .side-form >.set-form>div>label {
+
+    position: absolute;
+
+    top: 0;
+
+    display: block;
+
+    transition: 0.2s;
+
+    font-size: 1rem;
+
+    color: rgba(4, 113, 255,1);
+
+    font-weight:700;    
+
+  }
+/*
+label[for="address"]{
+    position: relative;
+    top:-2rem;
+}
+*/
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.50)),url("https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    background-size: cover;
+  
+}
+section .color {
+  position: absolute;
+  filter: blur(150px);
+}
+
+section .color:nth-child(1) {
+  top: -350px;
+  width: 600px;
+  height: 600px;
+  background: #ff359b;
+}
+section .color:nth-child(2) {
+  bottom: -150px;
+  left: 100px;
+  width: 500px;
+  height: 500px;
+  background: #fffd87;
+}
+section .color:nth-child(3) {
+  bottom: 50px;
+  right: 100px;
+  width: 300px;
+  height: 300px;
+  background: #00d2ff;
+}
+
+.box {
+  position: relative;
+}
+.box .square {
+  position: absolute;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  animation: animate 10s linear infinite;
+  animation-delay: calc(-1s * var(--i));
+}
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(-40px);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+}
+.box .square:nth-child(1) {
+  top: -50px;
+  right: -60px;
+  width: 100px;
+  height: 100px;
+}
+.box .square:nth-child(2) {
+  top: 150px;
+  left: -100px;
+  width: 120px;
+  height: 120px;
+  z-index: 2;
+}
+.box .square:nth-child(3) {
+  bottom: 50px;
+  right: -60px;
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+}
+.box .square:nth-child(4) {
+  bottom: -80px;
+  left: 100px;
+  width: 50px;
+  height: 50px;
+}
+.box .square:nth-child(5) {
+  top: -80px;
+  left: 140px;
+  width: 60px;
+  height: 60px;
+}
+.container {
+  position: relative;
+  width: 400px;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+.form h2 {
+  position: relative;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+.form h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background: #fff;
+}
+.form .inputBox {
+  width: 100%;
+  margin-top: 20px;
+}
+.form .inputBox input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.form .inputBox input::placeholder {
+  color: #fff;
+}
+.form .inputBox input[type="submit"] {
+  background: #fff;
+  color: #666;
+  max-width: 100px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.forget {
+  margin-top: 5px;
+  color: #fff;
+}
+.forget * {
+  color: #fff;
+  font-weight: 600;
+}
+
+.regbtn{
+    padding: 0.8rem 1rem !important;
+/*    border: solid 1px linear-gradient(to bottom,rgba(4, 113, 255,1),rgba(109, 8, 177,1));*/
+    border: none;
+
+    border-radius: 25px;
+}

@@ -1,0 +1,6 @@
+PDO = PHP DATA OBJECT 
+- Create the PDO Object
+- prepare() , execute(), fetch()  
+
+
+ 

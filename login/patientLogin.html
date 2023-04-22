@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Patient Login</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="../includes/patientlogin.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<!--<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/loginstyle.css">
+        <style >
+            .input-error{
+            box-shadow: 0 0 5px red;
+                }
+        </style>
+    </head>
+<body>
+   
+<!--
+    <form action="patientLogin.php" method="POST">
+        <table>
+            <tr>
+                <td>Username or Email</td>
+                <td><input type="text" name="username" id="username"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" id="password"></td>
+            </tr>
+            <tr>
+                
+                <td><input id="submit" type="submit" name="submit" Value="Log In"></td>
+            </tr>
+        </table>
+         <p><a href="../reset-password/checkmail.php?key=1"> Forgot Password?</a> </p>
+    <p> OR <a href="patientRegistration.php">Register Here!</a></p>
+    </form>
+</body>
+</html>-->
+<section>
+         <p id="message"></p>
+<!--
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+-->
+        <div class="box">
+            <div class="square" style="--i:0"></div>
+            <div class="square" style="--i:1"></div>
+            <div class="square" style="--i:2"></div>
+            <div class="square" style="--i:3"></div>
+            <div class="square" style="--i:4"></div>
+            <div class="container">
+                <div class="form">
+                    <img src="../img/logo.png"
+             alt="" width="40%" class="mb-2">
+                    <h2>Login Form</h2>
+                    <form method="post" action="patientLogin.php">
+                        <div class="inputBox">
+                            <input type="text" name="username" id="username" placeholder="Username">
+                        </div>
+                        <div class="inputBox">
+                            <input type="password" id="password" name="password" placeholder="Password">
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" id="submit" name="submit" value="Login">
+                        </div>
+                        <p class="forget">Forget password ? 
+                            <a href="#" data-toggle="modal" data-target="#exampleModal">Click Here</a>
+                        </p>
+                        <p class="forget">Don't have an account ?
+                            <a href="adminregistration.php">Sign up</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--    Model-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Forgot Password?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+    <div id="forgot">
+    
+<form action="" method="post">
+<p>Enter your registered mail address :</p>
+<!--<input type="hidden" id="key" name="key" value="2">-->
+<input type="text" id="forgotEmail" name="email">
+<br>
+<!--<input type="submit" name="submit">-->
+</form>
+    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" id="BtnSubmit" class="btn btn-primary">
+            Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+    <script>
+//    $(document).ready(function(){
+                
+        
+        $("#BtnSubmit").on("click",function(){
+            var emailVal=$("#forgotEmail").val();
+//            var keyVal=$("#key").val();
+            $("#forgot").load("../reset-password/reset-password.php",{email:emailVal,key:1,submit:"submit"});          
+        });
+//        $("#forgot").load("../reset-password/checkmail.php?key=2");
+//    });    
+
+    </script>
+</html>

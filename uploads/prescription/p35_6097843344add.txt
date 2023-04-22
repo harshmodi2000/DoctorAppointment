@@ -1,0 +1,49 @@
+Choose DELIMETER : <asp:DropDownList ID="DropDownList1" runat="server">
+                        <asp:ListItem>COMMA</asp:ListItem>
+                        <asp:ListItem>PIPE</asp:ListItem>
+                    </asp:DropDownList>
+                    <br />
+                    <br />
+                    <asp:Button ID="btexport" runat="server" OnClick="btexport_Click" Text="Export" />
+
+
+----------
+protected void btexport_Click(object sender, EventArgs e)
+        {
+            String Del = DropDownList1.SelectedValue == "COMMA" ? "," : "|";
+            StringBuilder sb = new StringBuilder();
+            try
+            {
+                int id = Int32.Parse(Application["id"].ToString());
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                SqlDataAdapter da = new SqlDataAdapter("SELECT [Id],[studentname],[password],[emailid],[course] FROM student", conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                ds.Tables[0].TableName = "Student";
+                foreach (DataRow dr in ds.Tables["Students"].Rows)
+                {
+                    int sid = Convert.ToInt32(dr["Id"]);
+                    sb.Append(sid.ToString() + Del);
+                    sb.Append(dr["studentname"].ToString() + Del);
+                    sb.Append(dr["password"].ToString() + Del);
+                    sb.Append(dr["emailid"].ToString() + Del);
+                    sb.Append(dr["course"].ToString() + Del);
+                    sb.Append("\r\n");
+
+                }
+
+                StreamWriter file = new StreamWriter(@"C:\file\Data.txt");
+                file.WriteLine(sb.ToString());
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("error: " + ex.ToString());
+            }
+        }
+----------------
+<connectionStrings>
+    <add name="ConnectionString" connectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\registration.mdf;Integrated Security=True"
+      providerName="System.Data.SqlClient" />
+  </connectionStrings>

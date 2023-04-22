@@ -1,0 +1,351 @@
+/* CSS Document */
+@import 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap';
+body{
+/*    padding: 3rem;*/
+    font-family: "lato" !important;
+    background: linear-gradient(to right,rgb(4, 113, 255),rgb(109, 8, 177)) !important;
+    box-sizing: border-box !important;
+    color: white;
+}
+table {
+  width: 95%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+th {
+  text-align: left;
+}
+thead th {
+  background: rgba(50, 50, 50, 0.45);
+}
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+tbody td {
+  position: relative;
+}
+tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.floating-label { 
+  position:relative; 
+  margin-bottom:20px; 
+}
+.floating-input , .floating-select {
+  font-size:14px;
+  padding:4px 4px;
+  display:block;
+  width:14rem;
+  height:30px;
+  background-color: transparent;
+  border:none;
+  border-bottom:1px solid #fff;
+}
+
+.floating-input:focus , .floating-select:focus {
+     outline:none;
+     border-bottom:2px solid #f0f0f0; 
+}
+
+label {
+  color:#f1f1f1; 
+  font-size:14px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:5px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+.floating-input:focus ~ label, .floating-input:not(:placeholder-shown) ~ label {
+  top:-18px;
+  font-size:14px;
+  color:#f0f0f0;
+}
+
+.floating-select:focus ~ label , .floating-select:not([value=""]):valid ~ label {
+  top:-18px;
+  font-size:14px;
+  color:#f0f0f0;
+}
+
+/* active state */
+.floating-input:focus ~ .bar:before, .floating-input:focus ~ .bar:after, .floating-select:focus ~ .bar:before, .floating-select:focus ~ .bar:after {
+  width:50%;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.floating-textarea {
+   min-height: 30px;
+   max-height: 260px; 
+   overflow:hidden;
+  overflow-x: hidden; 
+}
+
+/* highlighter */
+.highlight {
+  position:absolute;
+  height:50%; 
+  width:100%; 
+  top:15%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+.floating-input:focus ~ .highlight , .floating-select:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* animation */
+@-webkit-keyframes inputHighlighter {
+	from { background:#f0f0f0; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#f0f0f0; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#f0f0f0; }
+  to 	{ width:0; background:transparent; }
+}
+
+/****  floating-Lable style end ****/
+
+
+/****** CODE ******/
+
+
+
+.file-upload {
+
+  display: block;
+
+  text-align: center;
+
+  font-family: Helvetica, Arial, sans-serif;
+
+  font-size: 12px;
+
+}
+
+.file-upload .file-select {
+
+  display:block;
+
+  border: 2px solid #dce4ec;
+
+  color: #34495e;
+
+  cursor: pointer;
+
+  height: 40px;
+
+  line-height: 40px;
+
+  text-align: left;
+
+  background: #ffffff;
+
+  overflow: hidden;
+width: 15rem;
+  position: relative;
+
+}
+
+
+.file-upload .file-select .file-select-button {
+
+  background: #dce4ec;
+
+  padding: 0 10px;
+
+  display: inline-block;
+
+  height: 40px;
+
+  line-height: 40px;
+
+}
+
+.file-upload .file-select .file-select-name {
+
+  line-height: 40px;
+
+  display: inline-block;
+
+  padding: 0 10px;
+
+}
+
+.file-upload .file-select:hover {
+
+  border-color: #34495e;
+
+  transition: all 0.2s ease-in-out;
+
+  -moz-transition: all 0.2s ease-in-out;
+
+  -webkit-transition: all 0.2s ease-in-out;
+
+  -o-transition: all 0.2s ease-in-out;
+
+}
+
+.file-upload .file-select:hover .file-select-button {
+
+  background: #34495e;
+
+  color: #ffffff;
+
+  transition: all 0.2s ease-in-out;
+
+  -moz-transition: all 0.2s ease-in-out;
+
+  -webkit-transition: all 0.2s ease-in-out;
+
+  -o-transition: all 0.2s ease-in-out;
+
+}
+
+.file-upload.active .file-select {
+
+  border-color: #3fa46a;
+
+  transition: all 0.2s ease-in-out;
+
+  -moz-transition: all 0.2s ease-in-out;
+
+  -webkit-transition: all 0.2s ease-in-out;
+
+  -o-transition: all 0.2s ease-in-out;
+
+}
+
+.file-upload.active .file-select .file-select-button {
+
+  background: #3fa46a;
+
+  color: #ffffff;
+
+  transition: all 0.2s ease-in-out;
+
+  -moz-transition: all 0.2s ease-in-out;
+
+  -webkit-transition: all 0.2s ease-in-out;
+
+  -o-transition: all 0.2s ease-in-out;
+
+}
+
+.file-upload .file-select input[type="file"] {
+
+  z-index: 100;
+
+  cursor: pointer;
+
+  position: absolute;
+
+  height: 100%;
+
+  width: 100%;
+
+  top: 0;
+
+  left: 0;
+
+  opacity: 0;
+
+  filter: alpha(opacity=0);
+
+}
+
+.file-upload .file-select.file-select-disabled {
+
+  opacity: 0.65;
+
+}
+
+.file-upload .file-select.file-select-disabled:hover {
+
+  cursor: default;
+
+  display: block;
+
+  border: 2px solid #dce4ec;
+
+  color: #34495e;
+
+  cursor: pointer;
+
+  height: 40px;
+
+  line-height: 40px;
+
+  margin-top: 5px;
+
+  text-align: left;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  position: relative;
+
+}
+
+.file-upload .file-select.file-select-disabled:hover .file-select-button {
+
+  background: #dce4ec;
+
+  color: #666666;
+
+  padding: 0 10px;
+
+  display: inline-block;
+
+  height: 40px;
+
+  line-height: 40px;
+
+}
+
+.file-upload .file-select.file-select-disabled:hover .file-select-name {
+
+  line-height: 40px;
+
+  display: inline-block;
+
+  padding: 0 10px;
+
+}
+
+
+
